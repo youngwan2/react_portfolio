@@ -1,0 +1,84 @@
+.Header {
+  height: 100px;
+  background-color: #a3835f;
+  position: relative;
+  box-shadow: 2px 2px 15px;
+}
+
+.Header_navigation ul {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.Header_navigation ul li a {
+  letter-spacing: 2px;
+  margin: 1rem;
+  color: rgb(234, 224, 211);
+  font-weight: 600;
+  position: relative;
+}
+
+.Header_navigation ul li a::before {
+  width: 0;
+  transition: 0.5s;
+  padding-top: 5px;
+  color: white;
+  content: "";
+
+  bottom: -5px;
+  position: absolute;
+  content: "";
+}
+
+.Header_navigation ul li a:hover::before {
+  width: 100%;
+  border-bottom: 1.5px solid rgb(255, 255, 255);
+}
+
+/* ☰ 버튼 */
+.Header_menu_btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 2rem;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.Header_menu_btn:hover {
+  color: wheat;
+}
+
+/* 미디어 쿼리 */
+
+@media screen and (max-width: 655px) {
+
+
+  .Header_navigation {
+    display: none;
+
+  }
+  .Header_navigation ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+  }
+
+  .Header_navigation ul li {
+    padding: 14px 0 14px 19px;
+    z-index: 105;
+    width: 100vw;
+    background-color: #a3835f;
+  }
+
+  /* ☰ 버튼 */
+  .Header_menu_btn {
+    display: block;
+  }
+}

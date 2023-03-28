@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Noto+Sans+KR&display=swap');
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Edu NSW ACT Foundation';
+    animation: 1s appear 1 cubic-bezier(0.075, 0.82, 0.165, 1) ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes appear {
+    from {opacity: 0; transform: translateX(-500px);}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* 페이지 이동 버튼 */
+.pageBtn{
+    z-index: 100;
+    border: none;
+    font-size: 5rem;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pageBtn:hover{
+    color:brown;
+    cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.App_prev_btn{
+    left: 3rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App_next_btn{
+    right: 3rem;
 }

@@ -1,0 +1,103 @@
+
+
+.Content {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+
+/* -----------목차 내부 컨테이너 */
+.Content_container {
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 네비게이션(컨텐츠 이동) */
+
+.Content_container .Content_navigation .Content_title::before {
+  content: "_";
+}
+
+/* 목차 제목 */
+.Content_container .Content_navigation .Content_title {
+  padding: 10px;
+  position: relative;
+  bottom: 1.5rem;
+  left: -1rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  background-color: #a3835f;
+  border-radius: 10px;
+  padding-left: 6.5rem;
+}
+.Content_container .Content_navigation ul {
+  font-size: 1.5em;
+}
+
+.Content_container .Content_navigation ul li::after {
+  content: "";
+  position: absolute;
+  border: 1px solid black;
+  width: 90%;
+  bottom: 0;
+  left: -5rem;
+  opacity: 0;
+  border-bottom: 1px;
+  transition: 0.5s;
+}
+.Content_container .Content_navigation ul li:hover{
+  color:brown
+}
+.Content_container .Content_navigation ul li:hover::after {
+    border: 1px solid #a3835f;
+    left: 0;
+    opacity: 1;
+  }
+
+  /* 목차 리스트 */
+.Content_container .Content_navigation ul li {
+  padding: 15px;
+  position: relative;
+  text-shadow: 1px 1px 5px rgb(139, 136, 135);
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+
+/* 각 목차의 간략 설명 부분 */
+.Content_sub_text{
+  font-size: 16px;
+}
+
+
+/* 사이드(오른쪽/아래) 이미지 */
+.Content_aside_image {
+  margin: 10px 30px;
+  padding: 10px;
+  margin-top: 3rem;
+  width: 450px;
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: 4px 5px 15px rgb(107, 105, 105);
+}
+
+@media screen and (max-width: 1000px) {
+  .Content_container .Content_navigation .Content_title{
+    padding-left: 6.3rem;
+    margin: 3rem auto;
+  
+  }
+  .Content_container {
+    margin-top: 3rem;
+    height: 700px;
+    flex-direction: column;
+  }
+  .Content_container .Content_navigation ul {
+    font-size: 1.25em;
+  }
+}
